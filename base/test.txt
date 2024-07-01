@@ -1,0 +1,9 @@
+Free list count: 105, max contiguous free size user: 0x2400000, share: 0x0
+Cavalry memory total size: 0x2800000 (about 40MB), used size: 0x400000 (about 4MB)
+
+Cavalry Share-to-DSP info: virt: 0000000000000000, phys: 0x0, size: 0x0
+Cavalry memory source type: RSV, user memory type: AMA
+
+Sched ISR count: 150886, time: curr/avg/min/max = 5615/12532/895/538003ns
+VP ISR count: 150885, time: curr/avg/min/max = 5940/5533/2360/76497ns
+Cavalry Status: Started
