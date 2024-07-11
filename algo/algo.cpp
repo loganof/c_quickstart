@@ -1,68 +1,7 @@
-// 单例
-#include <iostream>
-class SingleTon
-{
-private:
-    SingleTon() {}
 
-public:
-    static SingleTon &getInstance()
-    {
-        static SingleTon ins;
-        return ins;
-    }
-    ~SingleTon() {}
-    void act()
-    {
-        std::cout << "hello" << std::endl;
-    }
-};
-
-#if 0
-
-// 3.1 找出数组中重复的数字(数组辅助)
-int repeatNumber(int *arr, int n)
-{
-    int *temp = new int[n];
-    for (int i = 0; i < n; i++)
-    {
-        temp[arr[i]]++;
-        if (temp[arr[i]] >= 2)
-            return arr[i];
-    }
-}
-//  找出数组中重复的数字(无辅助数组)
-// 比较巧妙，后面再写
-
-// 3.2 不修改数组找出重复的数字(数组辅助)
-// 4.1 二维数组中的查找
-// 5.1 替换空格
-// 6.1 从尾到头打印链表
-struct ListNode
-{
-    int m_data;
-    ListNode *m_next;
-};
+#if 1
 
 // 递归实现
-
-// 7.1 重建二叉树(前序+中序)
-struct BTreeNode
-{
-    int m_value;
-    BTreeNode *m_left;
-    BTreeNode *m_right;
-};
-
-BTreeNode *constructTree(int *preArr, int *orderArr, int len)
-{
-    if (!preArr || !orderArr || len <= 0)
-        return nullptr;
-
-    // todo...
-}
-
-// 8.1 二叉树的下一个节点
 
 // 9.1 用两个栈实现队列
 
@@ -89,64 +28,8 @@ BTreeNode *constructTree(int *preArr, int *orderArr, int len)
 // 26 判断树的子结构
 //
 
-// 反转链表
-struct ListNode
-{
-    int val;
-    struct ListNode *next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
-
 #include <cstdio>
-class Solution
-{
-public:
-    /**
-     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
-     *
-     *
-     * @param head ListNode类
-     * @return ListNode类
-     */
-    ListNode *ReverseList(ListNode *head)
-    {
-        // write code here
-        if (!head || !head->next)
-        {
-            return head;
-        }
-        // 使用栈
-        // stack<int> stk;
-        // ListNode* tmpNode = head;
-        // while (tmpNode) {
-        //     stk.push(tmpNode->val);
-        //     tmpNode = tmpNode->next;
-        // }
-        // ListNode* newHead = new ListNode(stk.top());
-        // tmpNode = newHead;
-        // stk.pop();
-        // while(!stk.empty()){
-        //     tmpNode->next = new ListNode(stk.top());
-        //     tmpNode = tmpNode->next;
-        //     stk.pop();
-        // }
-        // return newHead;
-        // 使用2个指针
-        ListNode *last = nullptr;
-        ListNode *cur = head;
-        ListNode *next = nullptr;
 
-        while (cur->next)
-        {
-            next = cur->next;
-            cur->next = last;
-            last = cur;
-            cur = next;
-        }
-        cur->next = last;
-        return cur;
-    }
-};
 #endif
 
 #if 1
